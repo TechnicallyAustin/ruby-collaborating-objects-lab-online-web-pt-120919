@@ -22,10 +22,10 @@ def add_song(song)
 end
 
 def self.find_or_create_by_name(artist)
-  included = self.all.find { |name| name == artist}
-  if included != nil 
-    included
-  elsif included == nil 
+  find = self.all.find { |name| name == artist}
+  if find
+    find
+  else 
     artist = self.new(artist)
     artist  
     #binding.pry
