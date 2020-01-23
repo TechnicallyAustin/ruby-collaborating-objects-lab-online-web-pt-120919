@@ -22,9 +22,9 @@ def add_song(song)
 end
 
 def self.find_or_create_by_name(artist)
-  included = self.all.select { |names| names == self.name}
+  included = self.all.select { |name| name == self.name}
   if included
-    artist.name
+    included
   else 
     artist = Artist.new(artist)
   end
