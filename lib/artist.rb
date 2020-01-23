@@ -26,8 +26,8 @@ def self.find_or_create_by_name(artist)
   if included
     included
   elsif !included
-    new_artist = self.new(artist)
-    new_artist 
+    artist = self.new(artist)
+    artist  
   end
   
 end
