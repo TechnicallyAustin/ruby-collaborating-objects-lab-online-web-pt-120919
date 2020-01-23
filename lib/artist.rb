@@ -33,7 +33,7 @@ def self.find_or_create_by_name(artist)
 end
 
 def print_songs
-  @songs.each { |i| p i.name }
+  @songs.select { |i| i.name }
 end
 
   
