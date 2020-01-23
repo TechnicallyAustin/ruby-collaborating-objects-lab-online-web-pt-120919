@@ -22,7 +22,7 @@ def add_song(song)
 end
 
 def self.find_or_create_by_name(artist)
-  find = self.all.find { |arts| arts.name == artist.name}
+  find = self.all.find { |arts| arts.name == artist}
   if find
     find
   else 
