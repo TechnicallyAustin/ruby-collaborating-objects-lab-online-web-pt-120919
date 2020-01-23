@@ -13,7 +13,7 @@ def self.all
 end
 
 def songs 
-  self.class.Song.all 
+  Song.all.detect { |song| song.artist == self }
 end
 
 def add_song(song)
