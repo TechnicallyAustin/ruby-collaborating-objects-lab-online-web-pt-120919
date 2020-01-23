@@ -1,7 +1,7 @@
 require 'pry'
 class Artist
   @@all = []
-  attr_accessor :name, :artist, :songs 
+  attr_accessor :name, :artist
   def initialize(name)
     @name = name 
     @songs = []
@@ -13,19 +13,20 @@ def self.all
 end
 
 def songs 
-  @songs 
+  @songs  
 end
 
 def add_song(song)
   @songs << song
-  
   song.artist = self.name
 end
 
-def self.find_or_create_by_name
+def self.find_or_create_by_name(artist)
   included = self.all.select { |names| names == self.name}
   if included
     artist.name
+  else 
+    artist = Artist.new(artist)
   end
   #use uniq 
   # use select
