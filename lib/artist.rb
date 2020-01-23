@@ -26,10 +26,9 @@ def self.find_or_create_by_name(artist)
   if included
     included
   else 
-    artist = self.new("artist")
+    artist = self.new(artist)
   end
-  #use uniq 
-  # use select
+  
 end
   
   
