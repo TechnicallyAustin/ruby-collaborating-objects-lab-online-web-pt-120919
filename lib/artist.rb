@@ -28,7 +28,7 @@ def self.find_or_create_by_name(artist)
   elsif included == nil 
     artist = self.new(artist)
     artist  
-    binding.pry
+    #binding.pry
   end
   
 end
