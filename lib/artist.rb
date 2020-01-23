@@ -13,7 +13,7 @@ def self.all
 end
 
 def songs 
-  Song.all 
+  self.Song.all 
 end
 
 def add_song(song)
