@@ -28,6 +28,7 @@ def self.find_or_create_by_name(artist)
   elsif !included
     artist = self.new(artist)
     artist  
+    binding.pry
   end
   
 end
