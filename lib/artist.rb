@@ -25,7 +25,7 @@ def self.find_or_create_by_name(artist)
   included = self.all.find { |name| name == artist}
   if included
     included
-  else 
+  elsif !included
     new_artist = self.new(artist)
     new_artist 
   end
